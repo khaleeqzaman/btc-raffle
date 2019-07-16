@@ -1,0 +1,90 @@
+                    .overlay {
+                        position: absolute !important;
+                        top: 0 !important;
+                        bottom: 0 !important;
+                        left: 0 !important;
+                        right: 0 !important;
+                        background: rgba(0, 0, 0, 0.5) !important;
+                        transition: opacity 200ms !important;
+                        visibility: hidden !important;
+                        opacity: 0 !important;
+                    }
+                    .overlay .cancel {
+                        display: block !important;
+                        cursor: pointer !important;
+                        position: absolute !important;
+                        right: -15px !important;
+                        text-decoration: none !important;
+                        font-size: 20pt !important;
+                        top: -15px !important;
+                        border: 3px !important;
+                        border-radius: 50% !important;
+                        color: white !important;
+                        padding: 5px 10px !important;
+                        z-index: 1024 !important;
+                        background-color: #ada8a8 !important;
+                    }
+                    .overlay:target {
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                    }
+                    .modal {
+                        position:relative !important;
+                        margin: 100px auto !important;
+                        padding: 20px !important;
+                        background: #fff !important;
+                        border: 1px solid #666 !important;
+                        width: 100% !important;
+                        max-width: 500px !important;
+                        border-radius: 6px !important;
+                        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) !important;
+                        position: relative !important;
+                        top: unset !important;
+                        left: unset !important;
+                        overflow: unset !important;
+                    }
+                    .modal h2 {
+                        margin-top: 0 !important;
+                    }
+                    .modal .close {
+                        position: absolute !important;
+                        width: 20px !important;
+                        height: 20px !important;
+                        top: 20px !important;
+                        right: 20px !important;
+                        opacity: 0.8 !important;
+                        transition: all 200ms !important;
+                        font-size: 24px !important;
+                        font-weight: bold !important;
+                        text-decoration: none !important;
+                        color: #777 !important;
+                    }
+                    .modal .close:hover {
+                        opacity: 1 !important;
+                    }
+                    .modal .content {
+                        max-height: 400px !important;
+                        overflow: auto !important;
+                    }
+                    .modal .content p {
+                        margin: 0 0 1em !important;
+                        text-align: right !important;
+                    }
+                    .modal .content p:last-child {
+                        margin: 0 !important;
+                    }
+
+                    body {
+                        font-family: "Maven Pro", sans-serif !important;
+                        color: #777 !important;
+                        min-width: 350px !important;
+                    }
+
+                    h2 {
+                        font-size: 1.2em !important;
+                        margin-bottom: 30px !important;
+                    }
+                    p {
+                        line-height: 1.6 !important;
+                        margin-bottom: 20px !important;
+                    }
