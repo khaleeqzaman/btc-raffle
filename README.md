@@ -1,7 +1,7 @@
 # btc-raffle
 ### A very simple bitcoin raffle script that operates through blockonomics free merchant account
 
-You can see a copy of this script running at: http://vmpayday.com/raffle/ 
+You can see a copy of this script running at: https://vmpayday.com/raffle/ 
 
 This is a live site so consider joining our raffle. It costs 0.005 BTC per ticket and is a great way to say thanks for this script.
 
