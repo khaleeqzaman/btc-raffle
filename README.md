@@ -11,6 +11,8 @@ This script requires an account at blockonomics https://www.blockonomics.co/merc
 
 Blockonomics is a Bitcoin Merchant account that is free for anyone to use, has no branding, does not require sending users to a 3rd party site, and is very easy to setup. 
 
+Se your callback url to the file ipn.php from your server - no secret key is requires. 
+
 ===============================================================================
 
 INSTALL INSTRUCTIONS:
