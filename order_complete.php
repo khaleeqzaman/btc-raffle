@@ -1,8 +1,9 @@
 <?php
+    if (isset($_GET['value'])) { $value = strip_tags($_GET['value']) / 100000000; } else { die; }
     include $_SERVER['DOCUMENT_ROOT'].'/config.php';
     $stmt = $db->prepare('select status FROM bitcoin WHERE address = :addr AND bitcoin_amount = :amount');
     $stmt->bindParam(':addr', $_GET['addr']);
-    $stmt->bindParam(':amount', $_GET['amount']);
+    $stmt->bindParam(':amount', $value);
     $stmt->execute();
     $status = $stmt->fetchColumn();
     if($status == 'pending') {
