@@ -3,7 +3,7 @@
 
 You can see a copy of this script running at: https://vmpayday.com/raffle/ 
 
-This is a live site so consider joining our raffle. It costs 0.005 BTC per ticket and is a great way to say thanks for this script.
+This is a live site so consider joining our raffle. It costs 0.0005 BTC per ticket and is a great way to say thanks for this script.
 
 ===============================================================================
 
