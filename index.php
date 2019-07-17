@@ -127,6 +127,18 @@
                 <?php } ?>
             </div>
         </div>
+
+        <?php
+            $stmt=$db->prepare("SELECT paid_txid FROM winners ORDER BY id DESC LIMIT 1");
+            $stmt->execute();
+            $last_winner_txid = $stmt->fetchColumn();
+            if ($last_winner_txid == '') {
+                $last_winner_txid = 'Last Months Payout: <span style="float:right;">First Run</a>';
+            } else {
+                $last_winner_txid = 'Last Months Payout: <span style="float:right"><a target="_blank" href="https://live.blockcypher.com/btc/tx/'.$last_winner_txid.'">Click Here</span>';
+            }
+        ?>
+
         <div class="middle_bottom">
             <div class="middle_bottom_content">
                 <strong>This Months Tickets:</strong> <span style="float:right"><?php echo $tickets_total; ?></span></div>
@@ -134,7 +146,7 @@
                 <strong>Prize Pot:</strong><span style="float:right"><?php echo $pot; ?></span>
             </div>
             <div class="middle_bottom_content3">
-                <strong>Last Months Payout:</strong> <span style="float:right">Click Here</span>
+                <?php echo $last_winner_txid; ?>
             </div>
         </div>
         <div class="bottom">
