@@ -1,5 +1,5 @@
 <?php
-    if (isset($_GET['amount'])) { $value = strip_tags($_GET['amount']) / 100000000; } else { die; }
+    if (isset($_GET['amount'])) { $value = strip_tags($_GET['amount']); } else { die; }
     include $_SERVER['DOCUMENT_ROOT'].'/config.php';
     $stmt = $db->prepare('select status FROM bitcoin WHERE address = :addr AND bitcoin_amount = :amount');
     $stmt->bindParam(':addr', $_GET['addr']);
