@@ -71,7 +71,7 @@
                 <?php if(isset($r) && $visitor_ip != $ip) { ?>
                     <input type="hidden" name="sponsor" value="<?php echo $r; ?>">
                 <?php } ?>
-                <input type="text" name="item" placeholder="YOUR BITCOIN ADDRESS">
+                <input id="inputbtc" type="text" name="item" placeholder="YOUR BITCOIN ADDRESS">
                 <button type=""submit">Buy A Ticket</button>
             </form>
         </div>
@@ -163,6 +163,19 @@
             </h1>
         </div>
         <script>
+            function doIt(e) {
+                var e = e || event;
+                if (e.keyCode == 32) return false;
+            }
+            function pasteIt(e) {
+                var e = e || event;
+                this.value = this.value.replace(/\s/g,'');
+            }
+            window.onload = function(){
+                var inp = document.getElementById("inputbtc");
+                inp.onkeydown = doIt;
+                inp.oninput = pasteIt
+            };
             document.getElementById("select_winner").onclick = function(e){
                 e.preventDefault();
                 var c = confirm('Warning this will remove all data from current contest excpet previous winners! This includes all addresses and txid\'s!');
