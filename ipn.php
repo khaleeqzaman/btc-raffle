@@ -4,7 +4,7 @@
     if (isset($_GET['addr'])) { $addr = strip_tags($_GET['addr']); } else { die; }
     if (isset($_GET['value'])) { $value = strip_tags($_GET['value']) / 100000000; } else { die; }
 
-    if ($status == 1) {
+    if ($status == 0) {
         $check_url = 'https://www.blockchain.com/btc/tx/'.$txid;
         $check = file_get_contents($check_url);
 
