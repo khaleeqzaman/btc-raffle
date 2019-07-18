@@ -22,7 +22,13 @@
         $context = stream_context_create($options);
         $contents = file_get_contents($url, false, $context);
         $object = json_decode($contents);
-        $addr = $object->address;
+
+        if (isset($object->address)) {
+            $addr = $object->address;
+        } else {
+            echo $http_response_header[0]."\n".$contents;
+        }
+
 
         $item = $_POST['item'];
 
