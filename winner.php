@@ -24,6 +24,7 @@
     $arr = explode (",", $entries);
     $random = shuffle($arr);
     $winner = $arr[$random];
+    if ($winner == '') { $winner = $entries; }
 
     $stmt = $db->prepare('INSERT INTO winners (address) VALUES (:address)');
     $stmt->bindParam(':address', $winner);
