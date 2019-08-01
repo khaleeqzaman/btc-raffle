@@ -135,7 +135,7 @@
             if ($last_winner_txid == '') {
                 $last_winner_txid = 'Last Months Payout: <span style="float:right;">First Run</a>';
             } else {
-                $last_winner_txid = 'Last Months Payout: <span style="float:right"><a target="_blank" href="https://live.blockcypher.com/btc/tx/'.$last_winner_txid.'">Click Here</span>';
+                $last_winner_txid = 'Last Months Payout: <span style="float:right"><a target="_blank" href="https://live.blockcypher.com/btc/tx/'.$last_winner_txid.'">Click Here</a></span>';
             }
         ?>
 
